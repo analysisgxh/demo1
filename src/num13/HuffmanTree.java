@@ -1,10 +1,12 @@
 package num13;
 
 public class HuffmanTree {
+	//HuffmanNode root;
+	HuffmanNode[] HN;
 	public int[][] huffmanCoding(int[] W) {
 		int n = W.length;
 		int m = 2 * n - 1;
-		HuffmanNode[] HN = new HuffmanNode[m];
+	 HN = new HuffmanNode[m];
 		int i;
 		for (i = 0; i < n; i++)
 			HN[i] = new HuffmanNode(W[i]);
@@ -24,6 +26,7 @@ public class HuffmanTree {
 			HN[i].rchild=min2;
 			HN[i].weight=min1.weight + min2.weight;
 		}
+	//	root=HN[HN.length-1];
 
 		int[][] HuffCode = new int[n][n];
 		for (int j = 0; j < n; j++) {
@@ -51,6 +54,22 @@ public class HuffmanTree {
 				min=h;
 		}
 		return min;
+	}
+	public int decode(String s,HuffmanNode p) {
+	//	HuffmanNode p=root;
+		while(!s.isEmpty()) {
+			if(s.charAt(0)=='0') {
+				p=p.lchild;
+				s=s.substring(1);
+			}else {
+				p=p.rchild;
+				s=s.substring(1);
+			}
+		}
+		return p.weight;
+	}
+	public HuffmanNode[] get() {
+		return HN;
 	}
 
 }

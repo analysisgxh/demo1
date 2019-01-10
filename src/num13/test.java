@@ -41,6 +41,18 @@ public class test {
 			}
 			System.out.println();
 		}
+		//System.out.println(t.get().length);
+		System.out.println("请输入你要解码的2进制编码");
+		//int m
+		Scanner scp=new Scanner(System.in); 
+		String str=scp.nextLine();
+		int k=t.decode(str,t.get()[(t.get().length)-1]);
+		System.out.println("解码为"+k);
+		for(int i=0;i<num;i++) {
+			if(h[i].weight==k) {
+				System.out.println(h[i].c);
+			}
+		}
 		
 		
 		// TODO Auto-generated method stub

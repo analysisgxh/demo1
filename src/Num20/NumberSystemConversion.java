@@ -60,8 +60,8 @@ public class NumberSystemConversion {
 		for(int i=0;i<s.length();i++) {
 			ls.push(s.charAt(i));
 		}
-		ls.display();
-		System.out.println("length"+ls.length());
+		//ls.display();
+		//System.out.println("length"+ls.length());
 	
 	
 		for(int i=0;i<(s.length()/3);i++) {
@@ -74,7 +74,7 @@ public class NumberSystemConversion {
 				//r+=turn(c);
 				
 			}
-			System.out.println(c);
+		//	System.out.println(c);
 			r+=turn(c);
 			a.push(String.valueOf(convertTwo_Ten(r)));
 			
@@ -138,14 +138,14 @@ public class NumberSystemConversion {
 				//r+=turn(c);
 				
 			}
-			System.out.println(c);
+			//System.out.println(c);
 			r+=turn(c);
-			System.out.println("@"+r);
+		//	System.out.println("@"+r);
 			p.push(String.valueOf(convertTwo_Ten(r)));
 			
 	
 		}
-		p.display();
+		//p.display();
 		/*while(!b.isEmpty()) {
 			String c="";
 			for(int i=0;i<4;i++) {
